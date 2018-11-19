@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6F375C98-51C0-4E30-8D3A-8D628EB40456}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NotifyChocolateyOutdated</RootNamespace>
+    <AssemblyName>NotifyChocolateyOutdated</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="chocolatey, Version=0.10.11.0, Culture=neutral, PublicKeyToken=79d02ea9cad655eb, processorArchitecture=MSIL">
+      <HintPath>packages\chocolatey.lib.0.10.11\lib\chocolatey.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Vanara.Core, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.Core.1.1.0\lib\net45\Vanara.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.ComCtl32, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.ComCtl32.1.1.0\lib\net45\Vanara.PInvoke.ComCtl32.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.Gdi32, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.Gdi32.1.1.0\lib\net45\Vanara.PInvoke.Gdi32.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.Kernel32, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.Kernel32.1.1.0\lib\net45\Vanara.PInvoke.Kernel32.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.Ole, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.Ole.1.1.0\lib\net45\Vanara.PInvoke.Ole.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.Security, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.Security.1.1.0\lib\net45\Vanara.PInvoke.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.Shared, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.Shared.1.1.0\lib\net45\Vanara.PInvoke.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.Shell32, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.Shell32.1.1.0\lib\net45\Vanara.PInvoke.Shell32.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.ShlwApi, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.ShlwApi.1.1.0\lib\net45\Vanara.PInvoke.ShlwApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.User32, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.User32.1.1.0\lib\net45\Vanara.PInvoke.User32.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.User32.Gdi, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Vanara.PInvoke.User32.Gdi.1.1.0\lib\net45\Vanara.PInvoke.User32.Gdi.dll</HintPath>
+    </Reference>
+    <Reference Include="Windows.Data" />
+    <Reference Include="Windows.UI" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
